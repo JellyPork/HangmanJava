@@ -47,7 +47,19 @@ public class ControlJuego {
                 posicion = cadena.indexOf(caracter, posicion + 1);
             }
             return contador;
-    }    
+    }  
+    
+    public static int verificarPalabra(String palabraAux,String jugada,int puntuacion){
+        int temp = puntuacion;
+        
+        
+        if(jugada.equals(palabraAux)){
+            puntuacion = 6;
+        }else{
+            puntuacion++;
+        }
+        return puntuacion;
+    }
     
     public static void dibujarAhorcado(int intentoFallido){
         switch(intentoFallido){

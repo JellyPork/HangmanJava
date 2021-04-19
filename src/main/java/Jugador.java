@@ -40,14 +40,11 @@ public class Jugador {
         String dec;
         Scanner teclado = new Scanner(System.in);
         System.out.println("Deseas adivinar la palabra directamente?");
-            dec = (teclado.nextLine()).toLowerCase();
+        System.out.println("1.Ingresar Letra");
+        System.out.println("2.Ingresar Palabra");
+            decision = teclado.nextInt();
             
-        if(dec == "si"){
-            decision = 1;
-        }else{
-            decision = 2;
-        }    
-            
+          
         return decision;
     }
     

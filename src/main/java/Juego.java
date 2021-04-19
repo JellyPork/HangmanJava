@@ -41,7 +41,8 @@ public class Juego {
 
             System.out.println(palabraJuego);
 
-            String jugada;
+            
+            int decision;
             String[] palabraJugador = new String[palabraInicial.length()];
             for (int m = 0; m < palabraJuego.length(); m++) {
                 palabraJugador[m] = "" + palabraJuego.charAt(m);
@@ -52,10 +53,20 @@ public class Juego {
 
 
             while (puntuacion < 5) { //si llega a perder 5 vidas el jugador pierde
-
+                String jugada = "";
+                decision = 0;
                 System.out.println("Numero de oportunidades antes de morir: " + (puntuacion) + " de 5.");
-
-                jugada = Jugador.ingresarChar();
+                decision = Jugador.ingresarYes();
+                switch(decision){
+                    case 1:
+                        jugada = Jugador.ingresarChar();
+                        break;
+                    case 2:
+                        jugada = Jugador.ingresarPalabra();  
+                        puntuacion = ControlJuego.verificarPalabra(palabraAux, jugada,puntuacion);
+                        
+                        break;
+                }
                 
 
                 palabraJugador = ControlJuego.checarLetrasAcertadas(jugada, palabraInicial, palabraJugador); //comprueba si la letra esta en la palabra
