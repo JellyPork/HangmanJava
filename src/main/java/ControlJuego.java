@@ -2,9 +2,10 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * En el ControlJuego se generara la palabra en base a una lista
+ * ademas de que se verificara que los caracteres sean los correctos y se cuente
+ * bien el numero de caracteres.
+ * Tambien se dibujara el ahorcado
  */
 
 /**
