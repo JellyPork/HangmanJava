@@ -17,7 +17,7 @@ public class Juego {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        
         String jugarOtra="si"; //para jugar otra partida
         while(jugarOtra.equals("si")) {
             int puntuacion = 0;
@@ -55,13 +55,8 @@ public class Juego {
 
                 System.out.println("Numero de vidas restantes: " + (puntuacion - 5) + " de 5.");
 
-                System.out.println("Introduzca una letra: ");
-                jugada = teclado.nextLine();
-
-                while (jugada.length() != 1) { //Validacion de la entrada del jugador 2
-                    System.out.println("Introduzca SOLO una letra: ");
-                    jugada = teclado.nextLine();
-                }
+                jugada = Jugador.ingresarChar();
+                
 
                 palabraJugador = ControlJuego.checarLetrasAcertadas(jugada, palabraInicial, palabraJugador); //comprueba si la letra esta en la palabra
 
@@ -104,8 +99,8 @@ public class Juego {
             System.out.println();
             System.out.println("Juego finalizado");
 
-            System.out.println("¿Desea jugar otra partida? Introduzca si para continuar");
-            jugarOtra = (teclado.nextLine()).toLowerCase();
+            
+            jugarOtra = Jugador.ingresarSi();
         }
     }
     

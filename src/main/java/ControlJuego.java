@@ -94,6 +94,8 @@ public class ControlJuego {
                     System.out.println("___|________");
                     break;
         }
+        
+        
 
     }
 }
