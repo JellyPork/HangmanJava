@@ -34,4 +34,30 @@ public class Jugador {
             
         return jugarOtra;
     }
+    
+    public static int ingresarYes(){
+        int decision;
+        String dec;
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Deseas adivinar la palabra directamente?");
+            dec = (teclado.nextLine()).toLowerCase();
+            
+        if(dec == "si"){
+            decision = 1;
+        }else{
+            decision = 2;
+        }    
+            
+        return decision;
+    }
+    
+    public static String ingresarPalabra(){
+        Scanner teclado = new Scanner(System.in);
+        String palabra;
+        
+        System.out.println("Introduzca una palabra: ");
+                palabra = teclado.nextLine();
+                
+        return palabra;
+    }
 }

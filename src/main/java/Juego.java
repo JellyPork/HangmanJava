@@ -53,7 +53,7 @@ public class Juego {
 
             while (puntuacion < 5) { //si llega a perder 5 vidas el jugador pierde
 
-                System.out.println("Numero de vidas restantes: " + (puntuacion - 5) + " de 5.");
+                System.out.println("Numero de oportunidades antes de morir: " + (puntuacion) + " de 5.");
 
                 jugada = Jugador.ingresarChar();
                 
